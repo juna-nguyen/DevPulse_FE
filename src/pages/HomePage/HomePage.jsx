@@ -67,13 +67,11 @@ const HomePage = () => {
   }, [fetchResources]);
 
   // 2. Logic Xóa
-  // Bấm vào icon thùng rác trên card: Chỉ lưu id và mở modal
   const handleDeleteClick = (id) => {
     setResourceToDelete(id);
     setIsDeleteModalOpen(true);
   };
 
-  // Xác nhận xóa trong Modal
   const confirmDelete = async () => {
     if (!resourceToDelete) return;
 
@@ -92,7 +90,6 @@ const HomePage = () => {
     }
   };
 
-  // Hủy xóa trong Modal
   const cancelDelete = () => {
     setIsDeleteModalOpen(false);
     setResourceToDelete(null);
@@ -156,7 +153,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-rose-50/40 font-sans text-slate-900 selection:bg-pink-400 selection:text-white">
       {/* Toast Notifications */}
       <Toaster position="top-right" reverseOrder={false} />
 
@@ -199,7 +196,7 @@ const HomePage = () => {
         onSubmit={handleSaveResource}
       />
 
-      {/* 3. Custom Delete Confirmation Modal (Tailwind CSS) */}
+      {/* Delete Confirmation Modal */}
       <DeleteConfirmationModal
         isOpen={isDeleteModalOpen}
         onConfirm={confirmDelete}

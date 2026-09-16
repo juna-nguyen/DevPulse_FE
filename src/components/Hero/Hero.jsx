@@ -1,5 +1,5 @@
-﻿import { Sparkles, Layers, TrendingUp } from "lucide-react";
-import heroImg from "../../assets/hero.png";
+﻿import { Sparkles, Layers, TrendingUp, Code2, Terminal } from "lucide-react";
+import faviconImg from "../../assets/favicon.png";
 
 const Hero = () => {
   return (
@@ -56,12 +56,51 @@ const Hero = () => {
               <div className="absolute -top-6 -left-6 h-72 w-72 rounded-full bg-pink-200/40 blur-3xl"></div>
               <div className="absolute -bottom-6 -right-6 h-72 w-72 rounded-full bg-rose-200/40 blur-3xl"></div>
 
-              <div className="relative overflow-hidden rounded-3xl border border-pink-100 bg-white p-4 shadow-xl shadow-pink-100/50">
-                <img
-                  src={heroImg}
-                  alt="DevPulse Hero Illustration"
-                  className="h-auto w-full rounded-2xl object-cover"
-                />
+              <div className="relative overflow-hidden rounded-3xl border border-pink-100 bg-white p-6 shadow-xl shadow-pink-100/50">
+                <div className="flex items-center justify-between border-b border-pink-50 pb-4">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={faviconImg}
+                      alt="DevPulse Logo"
+                      className="h-10 w-10 rounded-xl"
+                    />
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-900">
+                        DevPulse Hub
+                      </h4>
+                      <p className="text-xs text-pink-600 font-medium">
+                        Sweet Pastel Pink Edition
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-1.5">
+                    <div className="h-3 w-3 rounded-full bg-rose-300"></div>
+                    <div className="h-3 w-3 rounded-full bg-pink-300"></div>
+                    <div className="h-3 w-3 rounded-full bg-pink-400"></div>
+                  </div>
+                </div>
+
+                <div className="mt-4 space-y-3">
+                  <div className="flex items-center gap-3 rounded-2xl bg-pink-50/60 p-3">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-pink-500 text-white">
+                      <Code2 className="h-4 w-4" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="h-2.5 w-3/4 rounded-full bg-pink-200"></div>
+                      <div className="mt-1.5 h-2 w-1/2 rounded-full bg-pink-100"></div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 rounded-2xl bg-rose-50/60 p-3">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-rose-500 text-white">
+                      <Terminal className="h-4 w-4" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="h-2.5 w-2/3 rounded-full bg-rose-200"></div>
+                      <div className="mt-1.5 h-2 w-1/3 rounded-full bg-rose-100"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

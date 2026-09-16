@@ -20,8 +20,8 @@ const ResourceGrid = ({
 
   if (!resources || resources.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-slate-200 bg-white p-12 text-center">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+      <div className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-pink-200 bg-white p-12 text-center">
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-pink-100 text-pink-600">
           <FolderSearch className="h-7 w-7" />
         </div>
         <h3 className="mt-4 text-base font-bold text-slate-800">

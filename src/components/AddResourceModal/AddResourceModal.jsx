@@ -57,11 +57,11 @@ const AddResourceModal = ({
       ></div>
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-xl rounded-3xl border border-pink-100 bg-white p-6 shadow-2xl transition-all sm:p-8">
+      <div className="relative w-full max-w-xl rounded-3xl border border-pink-200/80 bg-white p-6 shadow-2xl transition-all sm:p-8">
         {/* Header */}
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-pink-50 text-pink-600">
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-pink-100 text-pink-600">
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
@@ -76,7 +76,7 @@ const AddResourceModal = ({
           <button
             type="button"
             onClick={onClose}
-            className="rounded-xl p-2 text-slate-400 hover:bg-pink-50 hover:text-slate-600 cursor-pointer"
+            className="rounded-xl p-2 text-slate-400 hover:bg-pink-50 hover:text-pink-600 cursor-pointer"
           >
             <X className="h-5 w-5" />
           </button>
@@ -90,7 +90,7 @@ const AddResourceModal = ({
               Tiêu đề tài nguyên <span className="text-rose-500">*</span>
             </label>
             <div className="relative mt-1.5">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-pink-400">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <BookOpen className="h-4 w-4" />
               </div>
               <input
@@ -100,7 +100,7 @@ const AddResourceModal = ({
                 value={formData.title}
                 onChange={handleChange}
                 placeholder="VD: Lộ trình học ReactJS từ cơ bản đến nâng cao"
-                className="w-full rounded-xl border border-pink-100 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+                className="w-full rounded-xl border border-pink-200 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
               />
             </div>
           </div>
@@ -111,7 +111,7 @@ const AddResourceModal = ({
               Đường dẫn URL <span className="text-rose-500">*</span>
             </label>
             <div className="relative mt-1.5">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-pink-400">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <Link2 className="h-4 w-4" />
               </div>
               <input
@@ -121,7 +121,7 @@ const AddResourceModal = ({
                 value={formData.url}
                 onChange={handleChange}
                 placeholder="https://react.dev"
-                className="w-full rounded-xl border border-pink-100 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+                className="w-full rounded-xl border border-pink-200 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ const AddResourceModal = ({
               Chuyên mục <span className="text-rose-500">*</span>
             </label>
             <div className="relative mt-1.5">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-pink-400">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <Layers className="h-4 w-4" />
               </div>
               <select
@@ -140,7 +140,7 @@ const AddResourceModal = ({
                 required
                 value={formData.category}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-pink-100 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 focus:border-pink-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100 cursor-pointer"
+                className="w-full rounded-xl border border-pink-200 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 focus:border-pink-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100 cursor-pointer"
               >
                 <option value="">Chọn một danh mục...</option>
                 {CATEGORIES.map((cat) => (
@@ -158,7 +158,7 @@ const AddResourceModal = ({
               Thẻ Tags (phân cách bằng dấu phẩy) <span className="text-rose-500">*</span>
             </label>
             <div className="relative mt-1.5">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-pink-400">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <Tag className="h-4 w-4" />
               </div>
               <input
@@ -168,7 +168,7 @@ const AddResourceModal = ({
                 value={formData.tags}
                 onChange={handleChange}
                 placeholder="react, javascript, frontend"
-                className="w-full rounded-xl border border-pink-100 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+                className="w-full rounded-xl border border-pink-200 bg-pink-50/40 py-2.5 pr-4 pl-10 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
               />
             </div>
           </div>
@@ -184,12 +184,12 @@ const AddResourceModal = ({
               value={formData.summary}
               onChange={handleChange}
               placeholder="Giới thiệu sơ lược về điểm nổi bật của tài nguyên này..."
-              className="mt-1.5 w-full rounded-xl border border-pink-100 bg-pink-50/40 p-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+              className="mt-1.5 w-full rounded-xl border border-pink-200 bg-pink-50/40 p-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-pink-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
             ></textarea>
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center justify-end gap-3 pt-4 border-t border-pink-50">
+          <div className="flex items-center justify-end gap-3 pt-4 border-t border-pink-100">
             <button
               type="button"
               onClick={onClose}
@@ -200,7 +200,7 @@ const AddResourceModal = ({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex items-center gap-2 rounded-xl bg-pink-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-pink-200 hover:bg-pink-600 disabled:opacity-60 cursor-pointer"
+              className="flex items-center gap-2 rounded-xl bg-pink-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-pink-200 transition-colors hover:bg-pink-600 disabled:opacity-60 cursor-pointer"
             >
               <Plus className="h-4 w-4" />
               <span>{initialData ? "Cập nhật" : "Đăng tài nguyên"}</span>
